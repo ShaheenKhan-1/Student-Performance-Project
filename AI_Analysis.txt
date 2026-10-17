@@ -1,0 +1,27 @@
+AI Tool Used: Gemini
+
+Prompt 1: Data Cleaning (Categorical Standardization)
+
+Prompt Given: "How do I replace specific categorical abbreviations (like 'f' and 'm' or 'u' and 'r') 
+with full words using a dictionary in Pandas to clean my dataset?"
+
+AI Response Evaluation: Highly accurate. The AI provided the exact df.replace() dictionary syntax.
+ It seamlessly handled the conversion of 'f'/'m' to 'female'/'male' and 'u'/'r' to 'urban'/'rural', 
+ which directly improved the readability of our visualizations.
+
+Prompt 2: Outlier Detection (Statistical Preprocessing)
+
+Prompt Given: "What is the correct syntax to calculate Z-scores and remove rows containing 
+outliers (Z > 3) for specific numerical columns like 'age', 'absences', and 'G3' using scipy.stats?"
+
+AI Response Evaluation: Accurate but required minor manual adjustment. The AI provided the correct 
+np.abs(stats.zscore()) logic, but the team had to manually ensure that missing values were handled 
+before running the Z-score calculation to prevent runtime errors.
+
+Prompt 3: Interactive Dashboarding (Plotly Dash)
+
+Prompt Given: "How do I group by 'studytime' and plot the average 'G3' final grade using a Seaborn 
+bar chart without showing the confidence interval error bars?"
+
+AI Response Evaluation: Spot on. The AI accurately suggested using sns.barplot() with the 
+errorbar=None parameter, resulting in a much cleaner and more professional bar chart.
